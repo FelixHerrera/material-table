@@ -12,6 +12,8 @@ import MTableFilterRow from './m-table-filter-row';
 import MTableHeader from './m-table-header';
 import MTablePagination from './m-table-pagination';
 import MTableToolbar from './m-table-toolbar';
+import Skeleton from 'react-loading-skeleton';
+
 /* eslint-enable no-unused-vars */
 
 class MaterialTable extends React.Component {
@@ -422,7 +424,7 @@ class MaterialTable extends React.Component {
         {props.isLoading && props.options.loadingType === "linear" &&
           <div style={{ position: 'relative', width: '100%' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, height: '100%', width: '100%' }}>
-              <LinearProgress />
+              <Skeleton />
             </div>
           </div>
         }
@@ -432,7 +434,7 @@ class MaterialTable extends React.Component {
           <div style={{ position: 'absolute', top: 0, left: 0, height: '100%', width: '100%' }}>
             <div style={{ display: 'table', width: '100%', height: '100%', backgroundColor: '#FFFFFFAA' }}>
               <div style={{ display: 'table-cell', width: '100%', height: '100%', verticalAlign: 'middle', textAlign: 'center' }}>
-                <CircularProgress />
+                <Skeleton />
               </div>
             </div>
           </div>
